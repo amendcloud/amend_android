@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\cropimage.xml",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\layout\\cropimage.xml"
+    },
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\main.xml",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\main.xml",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\cropimage.xml",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\layout\\cropimage.xml"
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_crop_pressed.9.png",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_crop_pressed.9.png"
+    },
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_crop_pressed.9.png",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_crop_pressed.9.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_rotate_right.png",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_rotate_right.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_autocrop.png",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_autocrop.png"
+    },
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_autocrop.png",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_autocrop.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_rotate_left.png",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_rotate_left.png"
+    },
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_rotate_right.png",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_rotate_right.png"
+    },
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_crop_operator.9.png",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_crop_operator.9.png"
+    },
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_rotate_left.png",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_rotate_left.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_crop_operator.9.png",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_crop_operator.9.png"
+    },
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_crop_height.png",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\camera_crop_height.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_crop_height.png",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\camera_crop_height.png"
+    },
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_crop_width.png",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\camera_crop_width.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_crop_width.png",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\camera_crop_width.png"
+    }
+]

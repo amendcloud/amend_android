@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="E:\GIT\amend_android\lib-progresswheel\res"/><source path="E:\GIT\amend_android\lib-progresswheel\build\generated\res\rs\release"/><source path="E:\GIT\amend_android\lib-progresswheel\build\generated\res\resValues\release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="E:\GIT\amend_android\lib-progresswheel\build-types\release\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="E:\GIT\amend_android\lib-progresswheel\res"><file name="lprogress" path="E:\GIT\amend_android\lib-progresswheel\res\layout\lprogress.xml" qualifiers="" type="layout"/><file path="E:\GIT\amend_android\lib-progresswheel\res\values\attrs.xml" qualifiers=""><declare-styleable name="ProgressWheel">
+        <attr format="boolean" name="matProg_progressIndeterminate"/>
+        <attr format="color" name="matProg_barColor"/>
+        <attr format="color" name="matProg_rimColor"/>
+        <attr format="dimension" name="matProg_rimWidth"/>
+        <attr format="float" name="matProg_spinSpeed"/>
+        <attr format="integer" name="matProg_barSpinCycleTime"/>
+        <attr format="dimension" name="matProg_circleRadius"/>
+        <attr format="boolean" name="matProg_fillRadius"/>
+        <attr format="dimension" name="matProg_barWidth"/>
+        <attr format="boolean" name="matProg_linearProgress"/>
+    </declare-styleable></file><file path="E:\GIT\amend_android\lib-progresswheel\res\values\colors.xml" qualifiers=""><color name="translucent_black">#80000000</color></file><file path="E:\GIT\amend_android\lib-progresswheel\res\values\strings.xml" qualifiers=""><string name="default_progressbar">Default Progressbar:</string><string name="app_name">Library</string></file><file path="E:\GIT\amend_android\lib-progresswheel\res\values\styles.xml" qualifiers=""><style name="CustomDialog" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style><style name="CustomDialogTranslucent" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/translucent_black</item>
+    </style><style name="MyCustomDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style></file></source><source path="E:\GIT\amend_android\lib-progresswheel\build\generated\res\rs\release"/><source path="E:\GIT\amend_android\lib-progresswheel\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="E:\GIT\amend_android\lib-progresswheel\build-types\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="ProgressWheel"><attr format="boolean" name="matProg_progressIndeterminate"/><attr format="color" name="matProg_barColor"/><attr format="color" name="matProg_rimColor"/><attr format="dimension" name="matProg_rimWidth"/><attr format="float" name="matProg_spinSpeed"/><attr format="integer" name="matProg_barSpinCycleTime"/><attr format="dimension" name="matProg_circleRadius"/><attr format="boolean" name="matProg_fillRadius"/><attr format="dimension" name="matProg_barWidth"/><attr format="boolean" name="matProg_linearProgress"/></declare-styleable></configuration></mergedItems></merger>

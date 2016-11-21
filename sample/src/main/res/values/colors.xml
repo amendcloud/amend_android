@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#02a3ed</color>
+    <color name="colorPrimaryLight">#56c1f2</color>
+    <color name="colorPrimaryDark">#0683ce</color>
+    <color name="colorAccent">#fff</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="gray">#ffe1e1e1</color>
+
+    <color name="gplus_default">#DF4A32</color>
+    <color name="facebook_default">#183C94</color>
+    <color name="twitter_default">#299FD3</color>
+    <color name="gplus_clicked">#90DF4A32</color>
+    <color name="facebook_clicked">#90183C94</color>
+    <color name="twitter_clicked">#90299FD3</color>
+    <color name="yellow">#ffff7561</color>
+    <color name="red">#ffff1900</color>
+    <color name="green">#ffffc236</color>
+
+    <color name="blue">#ff4c76b5</color>
+    <color name="transparent">#00000000</color>
+    <color name="orange">#CE7C01</color>
+    <color name="text_color">#555555</color>
+    <color name="dark_gray">#575757</color>
+    <color name="dark_gray_alpha">#40000000</color>
+    <color name="light_grey">#ffcdcdcd</color>
+    <color name="translucent_grey">#50cdcdcd</color>
+    <color name="btn_color">#c9e9f8</color>
+</resources>

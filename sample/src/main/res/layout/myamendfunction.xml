@@ -1,0 +1,290 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        card_view:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:id="@+id/llParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/llWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/margin_left_card_elements"
+                android:layout_marginStart="@dimen/margin_left_card_elements"
+                android:layout_marginTop="@dimen/margin_between_card_elements"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvWidth"
+                    android:layout_width="@dimen/demo"
+                    android:layout_height="30dp"
+                    android:text="Width"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etWidth"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_right_card_elements"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/dark_gray"
+
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/margin_left_card_elements"
+                android:layout_marginStart="@dimen/margin_left_card_elements"
+                android:layout_marginTop="@dimen/margin_between_card_elements"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvHeight"
+                    android:layout_width="@dimen/demo"
+                    android:layout_height="30dp"
+                    android:text="Height"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etHeight"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_right_card_elements"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/margin_left_card_elements"
+                android:layout_marginStart="@dimen/margin_left_card_elements"
+                android:layout_marginTop="@dimen/margin_between_card_elements"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/demo"
+                    android:layout_height="30dp"
+                    android:text="X"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etX"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_right_card_elements"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/margin_left_card_elements"
+                android:layout_marginStart="@dimen/margin_left_card_elements"
+                android:layout_marginTop="@dimen/margin_between_card_elements"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/demo"
+                    android:layout_height="30dp"
+                    android:text="Y"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etY"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_right_card_elements"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/margin_left_card_elements"
+                android:layout_marginStart="@dimen/margin_left_card_elements"
+                android:layout_marginTop="@dimen/margin_between_card_elements"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/demo"
+                    android:layout_height="30dp"
+                    android:text="Text"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_right_card_elements"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/margin_left_card_elements"
+                android:layout_marginStart="@dimen/margin_left_card_elements"
+                android:layout_marginTop="@dimen/margin_between_card_elements"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/demo"
+                    android:layout_height="30dp"
+                    android:text="Size"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_right_card_elements"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+
+        >
+
+        <Button
+            android:id="@+id/bGenerate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimaryLight"
+            android:text="Generate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/layout_background"
+            android:padding="1dp">
+
+            <ImageView
+
+                android:id="@+id/ivProcessedImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/default_generate" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

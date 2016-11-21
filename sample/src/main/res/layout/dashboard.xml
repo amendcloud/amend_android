@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.Dashboard">
+
+
+    <include layout="@layout/toolbar" />
+
+
+    <ImageView
+        android:id="@+id/ivMasterImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_pic" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bGallery"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/btn_color"
+            android:text="Pick image"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_gray"
+
+            />
+
+        <Button
+            android:id="@+id/bCamera"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bGallery"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/btn_color"
+            android:text="Capture image"
+            android:textAllCaps="false"
+
+            android:textColor="@color/dark_gray" />
+
+        <Button
+            android:id="@+id/bContinueLastFile"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bCamera"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/btn_color"
+            android:text="Continue with current upload"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_gray"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_crop_button.xml",
+        "source": "E:\\GIT\\amend_android\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_crop_button.xml"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_crop_button.xml",
+        "source": "E:\\AndroidProjects\\AmendSample\\lib-crop-image\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_crop_button.xml"
+    }
+]
