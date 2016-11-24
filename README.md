@@ -86,9 +86,13 @@ The following example uploads a file to the cloud:
 		}
 	});
    
-or you can get Image Name return by amend upload api
+you can get Image Name return by amend upload api in onSuccess method
 
-	string imageName = resp.ImageName;
+	@Override
+	public void onSuccess(int statusCode, int reqCode, String imageName) {
+		string myImage = imageName;
+	}
+	
 
 You can also specify your own Image Name:    
     
