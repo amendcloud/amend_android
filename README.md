@@ -16,11 +16,11 @@ For projects based on Android Framework, amend provides a library for simplifyin
 
 ## Setup ######################################################################
 
-amend Android library is available at [http://amendcloud.com/library/android.zip](http://amendcloud.com/library/android.zip)
+amend Android library is available at [http://amendcloud.com/library/amend_android.zip](http://amendcloud.com/library/amend_android.zip)
 
 ### Manual setup
 
-1. Go to [http://amendcloud.com/library/android.zip](http://amendcloud.com/library/android.zip) and download android library.
+1. Go to [http://amendcloud.com/library/android.zip](http://amendcloud.com/library/amend_android.zip) and download android library.
 2. Library is a ZIP archive that could be extracted using any unzip tool.
 3. Import library folder as a module in your android project.
 
