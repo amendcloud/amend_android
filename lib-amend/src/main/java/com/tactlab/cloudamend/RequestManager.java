@@ -23,6 +23,8 @@ import java.util.Properties;
  */
 
 public class RequestManager {
+    private static final String IMAGE_NAME = "ImageName";
+    private static final String NEW_NAME = "NewName";
     private Context context;
     private String imageName;
     private String imageUrl;
@@ -60,7 +62,203 @@ public class RequestManager {
         return status;
     }
 
-    public void upload(int requestCode, File file, AmendListener amendListener) {
+    public void rename(String imageName, final String newName, int requestCode, final AmendRenameListener amendListener) {
+        try {
+            if (Amend.accessKey == null || Amend.accessKey.equals("")) {
+                if (amendListener != null) {
+                    Exception e = new Exception("Access key required");
+                    amendListener.onError(400, requestCode, e);
+                }
+                Log.e(Amend.TAG, "Access key required");
+                return;
+            }
+            if (Amend.accessSecret == null || Amend.accessSecret.equals("")) {
+                if (amendListener != null) {
+                    Exception e = new Exception("Access Secret required");
+                    amendListener.onError(400, requestCode, e);
+                }
+                Log.e(Amend.TAG, "Access Secret required");
+                return;
+            }
+
+            if (Amend.amendName == null || Amend.amendName.equals("")) {
+                if (amendListener != null) {
+                    Exception e = new Exception("Amend name required");
+                    amendListener.onError(400, requestCode, e);
+                }
+                Log.e(Amend.TAG, "Amend name required");
+                return;
+            }
+
+            if (isNetworkOnline(context)) {
+                JSONObject obj = new JSONObject();
+
+
+                if (imageName != null && !imageName.isEmpty()) {
+                    obj.put(IMAGE_NAME, imageName);
+                } else {
+                    Exception e = new Exception("Image Name can not be null or empty");
+                    if (amendListener != null) {
+                        amendListener.onError(400, requestCode, e);
+                    }
+                    Log.e(Amend.TAG, "Image Name can not be null or empty");
+                    return;
+                }
+
+                if (newName != null && !newName.isEmpty()) {
+                    obj.put(NEW_NAME, newName);
+                } else {
+                    Exception e = new Exception("New Name can not be null or empty");
+                    if (amendListener != null) {
+                        amendListener.onError(400, requestCode, e);
+                    }
+                    Log.e(Amend.TAG, "New Name can not be null or empty");
+                    return;
+                }
+
+                String url = u.BASE_URL + Amend.amendName + "/" + u.RENAME;
+
+                new ApiRequest(url, obj.toString(), new ApiRequest.OnApiRequestDoneListener() {
+                    @Override
+                    public void onApiRequestDone(int statusCode, String result, int requestCode) {
+                        if (statusCode == 200) {
+                            if (amendListener != null) {
+                                amendListener.onSuccess(statusCode, requestCode, newName);
+                            }
+                        } else {
+                            try {
+                                JSONObject obj = new JSONObject(result);
+                                if (obj.has(Amend.MESSAGE)) {
+                                    String message = obj.getString(Amend.MESSAGE);
+                                    Exception e = new Exception(message);
+                                    if (amendListener != null) {
+                                        amendListener.onError(statusCode, requestCode, e);
+                                    }
+                                } else {
+                                    Exception e = new Exception("Something went wrong");
+                                    if (amendListener != null) {
+                                        amendListener.onError(statusCode, requestCode, e);
+                                    }
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                                if (amendListener != null) {
+                                    amendListener.onError(500, requestCode, e);
+                                }
+                            }
+                        }
+                    }
+                }, requestCode).execute();
+            } else {
+                if (amendListener != null) {
+                    Exception e = new Exception("Internet not reachable");
+                    amendListener.onError(500, requestCode, e);
+                }
+                Log.e(Amend.TAG, "Internet not reachable");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (amendListener != null) {
+                amendListener.onError(500, requestCode, e);
+            }
+        }
+    }
+
+    public void destroy(String imageName, int requestCode, final AmendDestroyListener amendListener) {
+        try {
+            if (Amend.accessKey == null || Amend.accessKey.equals("")) {
+                if (amendListener != null) {
+                    Exception e = new Exception("Access key required");
+                    amendListener.onError(400, requestCode, e);
+                }
+                Log.e(Amend.TAG, "Access key required");
+                return;
+            }
+            if (Amend.accessSecret == null || Amend.accessSecret.equals("")) {
+                if (amendListener != null) {
+                    Exception e = new Exception("Access Secret required");
+                    amendListener.onError(400, requestCode, e);
+                }
+                Log.e(Amend.TAG, "Access Secret required");
+                return;
+            }
+
+            if (Amend.amendName == null || Amend.amendName.equals("")) {
+                if (amendListener != null) {
+                    Exception e = new Exception("Amend name required");
+                    amendListener.onError(400, requestCode, e);
+                }
+                Log.e(Amend.TAG, "Amend name required");
+                return;
+            }
+
+            if (isNetworkOnline(context)) {
+                JSONObject obj = new JSONObject();
+
+
+                if (imageName != null && !imageName.equals("")) {
+                    obj.put(IMAGE_NAME, imageName);
+                } else {
+                    Exception e = new Exception("Image Name can not be null or empty");
+                    if (amendListener != null) {
+                        amendListener.onError(400, requestCode, e);
+                    }
+                    Log.d(Amend.TAG, "Image Name can not be null or empty");
+                    return;
+                }
+
+
+                String url = u.BASE_URL + Amend.amendName + "/" + u.DESTROY;
+
+                new ApiRequest(url, obj.toString(), new ApiRequest.OnApiRequestDoneListener() {
+                    @Override
+                    public void onApiRequestDone(int statusCode, String result, int requestCode) {
+                        if (statusCode == 200) {
+                            if (amendListener != null) {
+                                amendListener.onSuccess(statusCode, requestCode, "Image destroyed successfully");
+                            }
+                        } else {
+                            try {
+                                JSONObject obj = new JSONObject(result);
+                                if (obj.has(Amend.MESSAGE)) {
+                                    String message = obj.getString(Amend.MESSAGE);
+                                    Exception e = new Exception(message);
+                                    if (amendListener != null) {
+                                        amendListener.onError(statusCode, requestCode, e);
+                                    }
+                                } else {
+                                    Exception e = new Exception("Something went wrong");
+                                    if (amendListener != null) {
+                                        amendListener.onError(statusCode, requestCode, e);
+                                    }
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                                if (amendListener != null) {
+                                    amendListener.onError(500, requestCode, e);
+                                }
+                            }
+                        }
+                    }
+                }, requestCode).execute();
+            } else {
+                if (amendListener != null) {
+                    Exception e = new Exception("Internet not reachable");
+                    amendListener.onError(500, requestCode, e);
+                }
+                Log.e(Amend.TAG, "Internet not reachable");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (amendListener != null) {
+                amendListener.onError(500, requestCode, e);
+            }
+        }
+    }
+
+    public void upload(int requestCode, File file, AmendUploadListener amendListener) {
         if (file.exists()) {
             Bitmap bm = BitmapFactory.decodeFile(file.getAbsolutePath());
 
@@ -76,7 +274,7 @@ public class RequestManager {
 
     }
 
-    public void upload(int requestCode, File file, String imageName, AmendListener amendListener) {
+    public void upload(int requestCode, File file, String imageName, AmendUploadListener amendListener) {
         if (file.exists()) {
             Bitmap bm = BitmapFactory.decodeFile(file.getAbsolutePath());
 
@@ -92,16 +290,16 @@ public class RequestManager {
 
     }
 
-    public void upload(int requestCode, String imageBase64, AmendListener amendListener) {
+    public void upload(int requestCode, String imageBase64, AmendUploadListener amendListener) {
 
         uploadImage(requestCode, imageBase64, null, amendListener);
     }
 
-    public void upload(int requestCode, String imageBase64, String imageName, AmendListener amendListener) {
+    public void upload(int requestCode, String imageBase64, String imageName, AmendUploadListener amendListener) {
         uploadImage(requestCode, imageBase64, imageName, amendListener);
     }
 
-    private void uploadImage(int requestCode, String imageBase64, String imageName, AmendListener amendListener) {
+    private void uploadImage(int requestCode, String imageBase64, String imageName, AmendUploadListener amendListener) {
         try {
             if (Amend.accessKey == null || Amend.accessKey.equals("")) {
                 if (amendListener != null) {

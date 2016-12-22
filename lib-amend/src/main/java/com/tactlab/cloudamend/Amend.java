@@ -33,6 +33,7 @@ public class Amend {
     static final String IMAGE_NAME = "ImageName";
     static final String MESSAGE = "Message";
     static final String TAG = "Amend";
+
     static String amendName = null;
     static String accessKey = null;
     static String accessSecret = null;

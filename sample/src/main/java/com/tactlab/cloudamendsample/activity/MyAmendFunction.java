@@ -473,7 +473,7 @@ public class MyAmendFunction extends AppCompatActivity implements View.OnClickLi
             }
 
             if (options != null) {
-                Amend.with(this).load(sp.getValueString("KEY_IMAGEID"), options).listener(new RequestListener() {
+                Amend.with(this).load(sp.getValueString("KEY_IMAGENAME"), options).listener(new RequestListener() {
                     @Override
                     public void onStarted() {
                         pd.show();

@@ -11,14 +11,18 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.tactlab.cloudamend.Amend;
-import com.tactlab.cloudamend.AmendListener;
+import com.tactlab.cloudamend.AmendDestroyListener;
 import com.tactlab.cloudamend.AmendOptions;
+import com.tactlab.cloudamend.AmendRenameListener;
+import com.tactlab.cloudamend.AmendResponse;
+import com.tactlab.cloudamend.AmendUploadListener;
 import com.tactlab.cloudamend.Transform;
 import com.tactlab.cloudamendsample.R;
 import com.tactlab.cloudamendsample.utils.SharedPreference;
@@ -52,8 +56,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
 
         //Add your amend key here
-        //Amend.setAmendName("your-amendName");
-        //Amend.setCredentials("your-amendKey", "your-amendSecret");
+        Amend.setAmendName("demo");
+        Amend.setCredentials("e1aed6d0-d0b6-4018-8612-170962422c9b", "a4d90cf4e6029f9780c422551738073e");
 
         setContentView(R.layout.dashboard);
 
@@ -64,6 +68,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         findViews();
         checkPermissions();
+
+
     }
 
     // initializing the toolbar
@@ -85,9 +91,9 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         bGallery.setOnClickListener(this);
         bContinueLastFile.setOnClickListener(this);
 
-        if (!sp.getValueString("KEY_IMAGEID").isEmpty()) {
+        if (!sp.getValueString("KEY_IMAGENAME").isEmpty()) {
             final AmendOptions options = new AmendOptions().transform(new Transform().width(500).height(500).fit(Amend.FIT_FILL));
-            Amend.with(this).load(sp.getValueString("KEY_IMAGEID"), options).into(ivMasterImage);
+            Amend.with(this).load(sp.getValueString("KEY_IMAGENAME"), options).into(ivMasterImage);
             bContinueLastFile.setVisibility(View.VISIBLE);
         } else {
             bContinueLastFile.setVisibility(View.GONE);
@@ -198,10 +204,10 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     //common Functions for image processings
     public void uploadImageToAmend(File f) {
 
-        Amend.with(this).upload(1, f, new AmendListener() {
+        Amend.with(this).upload(1, f, new AmendUploadListener() {
             @Override
-            public void onSuccess(int statusCode, int reqCode, String imageId) {
-                sp.setValueString("KEY_IMAGEID", imageId);
+            public void onSuccess(int statusCode, int reqCode, AmendResponse response) {
+                sp.setValueString("KEY_IMAGENAME", response.getImageName());
                 findViewById(R.id.bContinueLastFile).setVisibility(View.VISIBLE);
                 openAmendOptions();
                 pd.dismiss();

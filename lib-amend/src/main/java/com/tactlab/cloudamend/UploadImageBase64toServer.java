@@ -1,7 +1,6 @@
 package com.tactlab.cloudamend;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.json.JSONObject;
 
@@ -24,16 +23,24 @@ public class UploadImageBase64toServer extends AsyncTask<Void, Void, String> {
 
     private String serviceUrl;
     private Properties properties;
-    private AmendListener amendListener;
+    private AmendUploadListener amendListener;
 
     private int reqCode;
 
     private Exception exception;
+    private static final String IMAGE_NAME = "ImageName";
+    private static final String RESOLUTION = "Resolution";
+    private static final String SIZE = "Size";
+    private static final String MIME_TYPE = "MimeType";
+
+    private static final String HEIGHT = "Height";
+    private static final String WIDTH = "Width";
+    private static final String CREATED_DATE = "CreatedDate";
+    private static final String CDN_URL = "CDNUrl";
+    private static final String SECURE_CDN_URL = "SecureCDNUrl";
 
 
-
-
-    public UploadImageBase64toServer(String serviceUrl, Properties properties, final AmendListener amendListener, final int reqCode) {
+    public UploadImageBase64toServer(String serviceUrl, Properties properties, final AmendUploadListener amendListener, final int reqCode) {
         this.serviceUrl = serviceUrl;
 
         this.reqCode = reqCode;
@@ -65,13 +72,12 @@ public class UploadImageBase64toServer extends AsyncTask<Void, Void, String> {
                 inputdata = properties.getProperty(ID);
 
             }
-            Log.d("Url", serviceUrl);
 
             urlConnection.setRequestProperty("Accept", "application/json;odata=verbose");
             urlConnection.setRequestProperty("Content-Length", Integer.toString(inputdata.getBytes().length));
             urlConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
-            urlConnection.setRequestProperty("AccessKey",Amend.accessKey);
-            urlConnection.setRequestProperty("AccessSecret",Amend.accessSecret);
+            urlConnection.setRequestProperty("AccessKey", Amend.accessKey);
+            urlConnection.setRequestProperty("AccessSecret", Amend.accessSecret);
 
             DataOutputStream dataOutputStream = new DataOutputStream(urlConnection.getOutputStream());
             dataOutputStream.write(inputdata.getBytes(), 0, inputdata.getBytes().length);
@@ -119,8 +125,17 @@ public class UploadImageBase64toServer extends AsyncTask<Void, Void, String> {
             if (statusCode == 200) {
                 try {
                     JSONObject obj = new JSONObject(result);
-                    String imgId = obj.getString(Amend.IMAGE_NAME);
-                    amendListener.onSuccess(statusCode, reqCode, imgId);
+                    String imgId = obj.getString(IMAGE_NAME);
+                    int wt = obj.getInt(WIDTH);
+                    int ht = obj.getInt(HEIGHT);
+                    int size = obj.getInt(SIZE);
+                    String mime_type = obj.getString(MIME_TYPE);
+                    String cr_date = obj.getString(CREATED_DATE);
+                    String res = obj.getString(RESOLUTION);
+                    String url = obj.getString(CDN_URL);
+                    String sc_url = obj.getString(SECURE_CDN_URL);
+                    AmendResponse ar = new AmendResponse(imgId, wt, ht, size, res, mime_type, cr_date, url, sc_url);
+                    amendListener.onSuccess(statusCode, reqCode, ar);
                 } catch (Exception e) {
                     amendListener.onError(500, reqCode, e);
                 }
