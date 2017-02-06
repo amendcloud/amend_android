@@ -47,7 +47,7 @@ Converting to a 150x100 PNG with rounded corners of 25 pixels:
 
 ![Sample 150x150 Rounded PNG](http://amend.cloud/test/image/w_150,h_100,fit_fill/r_25/baby "baby 150x150 Rounded PNG")
 
-For plenty more transformation options, see our [image transformations documentation](http://amend.com/documentation/image_transformations).
+For plenty more transformation options, see our [image transformations documentation](http://amendcloud.com/docs/image_transformation).
  
 ## Usage
 
